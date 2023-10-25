@@ -26,7 +26,7 @@ dependencies {
 	liquibaseRuntime 'org.liquibase:liquibase-groovy-dsl:3.0.3'
 	liquibaseRuntime 'org.liquibase:liquibase-core:4.20.0'
 	liquibaseRuntime 'info.picocli:picocli:4.7.3'
-	liquibaseRuntime 'org.liquibase:liquibase-core:4.17.1'
+	liquibaseRuntime 'org.liquibase:liquibase-core:4.20.0'
 
 }
 apply plugin: "org.liquibase.gradle"
@@ -38,7 +38,7 @@ tasks.named('test') {
 liquibase {
 	activities {
 		main {
-			changeLogFile "/src/main/resources/db/changelog/changelog.sql"
+			changeLogFile "/src/main/resources/db/changelog/master.xml"
 			url "jdbc:mysql://localhost:3306/akatunyan_jdbc"
 			username "root"
 			password "241663"
