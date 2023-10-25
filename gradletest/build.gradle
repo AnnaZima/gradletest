@@ -29,3 +29,14 @@ apply plugin: "org.liquibase.gradle"
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
+liquibase {
+	activities {
+		main {
+			changeLogFile "resources/db/changelog/changelog.sql"
+			url "jdbc:mysql://localhost:3306/akatunyan_jdbc"
+			username "root"
+			password "241663"
+		}
+	}
+}
