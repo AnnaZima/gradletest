@@ -5,13 +5,17 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Table;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class File  {
+@Table("files")
+public class FileEntity {
     @Id
-    Integer id;
-    Status status;
+    private Integer id;
+    private String name;
+    private String location;
+    private Status status;
 }

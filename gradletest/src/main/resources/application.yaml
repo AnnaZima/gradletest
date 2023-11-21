@@ -1,6 +1,25 @@
-spring.datasource.driver=com.mysql.cj.jdbc.Driver
-spring.datasource.url=jdbc:mysql://localhost:3306/akatunyan_jdbc
-spring.datasource.username=root
-spring.datasource.password=241663
+#spring.datasource.driver=com.mysql.cj.jdbc.Driver
+#spring.datasource.url=jdbc:
+
+
+server:
+  port: 8083
+
+spring:
+  r2dbc:
+    url: r2dbc:pool:mysql://localhost:3306/akatunyan_jdbc
+    username: root
+    password: 241663
+
+
+jwt:
+  password:
+    encoder:
+      secret: 2ac75a7a84f747f43919a14f5bcf25f8492d137a3b745e41302c7909d63f8a4497a4bc7305c14353b815c3cda0bd0420ba3fd4ab6f195f69a8c10ba7e069c901
+      iteration: 64
+      keylength: 256
+  secrete: f1a11c86d575062935bf2060ee52c1b35315443fed79e279074c088017832f8c99a478230062dbde70bd544da5813702d0b24fa610476d0b32086a32bddbdbd9
+  expiration: 3600
+  issuer: annakat
 
 

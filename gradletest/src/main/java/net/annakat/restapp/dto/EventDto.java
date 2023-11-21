@@ -1,2 +1,4 @@
-package net.annakat.restapp.dto;public class EventDto {
+package net.annakat.restapp.dto;
+
+public class EventDto {
 }
